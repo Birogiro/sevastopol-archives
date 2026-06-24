@@ -1,0 +1,57 @@
+{
+  "medical": {
+    "number": "01",
+    "code": "SCIMED TOWER",
+    "title": "Centro Médico San Cristobal",
+    "description": "Corredores clínicos, salas de cirurgia e laboratórios abandonados. Pouca visibilidade e muitos becos sem saída.",
+    "risk": "CRÍTICO",
+    "threats": "Xenomorfo / Sintéticos",
+    "access": "Elevador SCIMED",
+    "image": "assets/game-01.jpg",
+    "caption": "LABORATÓRIOS / SCIMED"
+  },
+  "engineering": {
+    "number": "02",
+    "code": "ENGINEERING DECK",
+    "title": "Núcleo de Engenharia",
+    "description": "Sistemas de potência, reatores e oficinas industriais. Vapor e máquinas comprometem a audição.",
+    "risk": "ALTO",
+    "threats": "Sintéticos / Incêndios",
+    "access": "Plataforma de serviço",
+    "image": "assets/game-02.jpg",
+    "caption": "CONTROLE / ENGENHARIA"
+  },
+  "habitation": {
+    "number": "03",
+    "code": "SOLOMONS HABITATION",
+    "title": "Torre de Habitação",
+    "description": "Apartamentos, comércio e áreas comunitárias deixadas pelos habitantes durante o colapso.",
+    "risk": "MODERADO",
+    "threats": "Sobreviventes / Emboscadas",
+    "access": "Trânsito Lorenz",
+    "image": "assets/game-06.jpg",
+    "caption": "HABITAÇÕES / SOLOMONS"
+  },
+  "transit": {
+    "number": "04",
+    "code": "LORENZ SYSTECH",
+    "title": "Sistema de Trânsito",
+    "description": "Linhas que conectam toda a estação. Plataformas abertas oferecem pouca cobertura e longas esperas.",
+    "risk": "ALTO",
+    "threats": "Xenomorfo / Falhas de energia",
+    "access": "Todas as linhas",
+    "image": "assets/game-03.jpg",
+    "caption": "EVACUAÇÃO / TRÂNSITO"
+  },
+  "industrial": {
+    "number": "05",
+    "code": "GEMINI EXOPLANET",
+    "title": "Setor Industrial",
+    "description": "Grandes depósitos e áreas de processamento com dutos extensos e sistemas instáveis.",
+    "risk": "CRÍTICO",
+    "threats": "Xenomorfo / Ambiente",
+    "access": "Elevador de carga",
+    "image": "assets/game-07.jpg",
+    "caption": "PROCESSAMENTO / INDUSTRIAL"
+  }
+}

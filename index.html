@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100f">
+  <meta name="description" content="Arquivo interativo sobre Alien: Isolation — narrativa, IA, personagens e guia de sobrevivência.">
+  <title>Sevastopol Archives — Alien: Isolation</title>
+  <link rel="icon" href="assets/sevastopol-archives-logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#/inicio" aria-label="Sevastopol Archives — início"><img src="assets/sevastopol-archives-logo.svg" alt="Sevastopol Archives"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Abrir menu</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#/inicio" data-route="inicio">Início</a>
+      <a href="#/historia" data-route="historia">História</a>
+      <a href="#/ia" data-route="ia">I.A. do Alien</a>
+      <a href="#/estacao" data-route="estacao">Estação</a>
+      <a href="#/arquivos" data-route="arquivos">Arquivos</a>
+      <a href="#/galeria" data-route="galeria">Galeria</a>
+    </nav>
+    <div class="status"><i></i> SISTEMA ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" data-screen="inicio" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span>RELATÓRIO DE INCIDENTE</span><span>USCSS / 2137</span></div>
+        <p class="hero-kicker">CREATIVE ASSEMBLY APRESENTA</p>
+        <h1 id="hero-title"><span>ALIEN</span><small>ISOLATION</small></h1>
+        <p class="hero-quote">No espaço, o medo nunca te deixa sozinho.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#/historia"><span>Explorar o jogo</span><b>↗</b></a>
+          <button class="button ghost sound-toggle" type="button" aria-pressed="false"><span class="pulse-dot"></span> Ativar ambiente</button>
+        </div>
+      </div>
+      <div class="hero-data" aria-label="Dados da estação">
+        <div><span>LOCAL</span><b>SEVASTOPOL</b></div>
+        <div><span>STATUS</span><b class="danger">COMPROMETIDO</b></div>
+        <div><span>SINAL</span><b>LV-426 / PERDIDO</b></div>
+      </div>
+      <a class="scroll-cue" href="#/historia"><span>ENTRAR</span><i></i></a>
+    </section>
+
+    <section class="section intro" id="arquivo" data-screen="historia">
+      <div class="section-index">01 / ARQUIVO</div>
+      <div class="section-heading reveal">
+        <p class="label">ACESSO AUTORIZADO // NÍVEL 03</p>
+        <h2>Uma missão em busca<br>de respostas.</h2>
+      </div>
+      <div class="intro-grid">
+        <article class="intro-copy reveal">
+          <p class="lead">Quinze anos após o desaparecimento de Ellen Ripley, sua filha Amanda recebe uma pista que pode encerrar uma ferida antiga.</p>
+          <p><strong>Alien: Isolation</strong> é um jogo de terror e sobrevivência em primeira pessoa ambientado entre os dois primeiros filmes da franquia. A bordo da estação comercial Sevastopol, Amanda procura o gravador de voo da Nostromo — e encontra algo que nunca deveria ter chegado ali.</p>
+          <dl class="spec-list">
+            <div><dt>GÊNERO</dt><dd>Terror / sobrevivência</dd></div>
+            <div><dt>ESTÚDIO</dt><dd>Creative Assembly</dd></div>
+            <div><dt>LANÇAMENTO</dt><dd>07.10.2014</dd></div>
+            <div><dt>PERSPECTIVA</dt><dd>Primeira pessoa</dd></div>
+          </dl>
+        </article>
+        <div class="incident-card reveal">
+          <div class="incident-top"><span>INCIDENTE 938-A</span><b>REC</b></div>
+          <div class="station-orbit" aria-hidden="true">
+            <i class="orbit orbit-a"></i><i class="orbit orbit-b"></i>
+            <div class="station-core"><span>SEVASTOPOL</span></div>
+          </div>
+          <div class="incident-bottom"><span>41° 07' N</span><span>CONEXÃO INSTÁVEL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section narrative dark-panel" id="narrativa" data-screen="historia">
+      <div class="section-index">02 / NARRATIVA</div>
+      <div class="section-heading reveal">
+        <p class="label">REGISTRO DE MISSÃO</p>
+        <h2>Sevastopol não está vazia.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span>01</span><div><p class="label">A PISTA</p><h3>O gravador da Nostromo</h3><p>A unidade de voo surge a bordo de Sevastopol. Amanda embarca na Torrens com Samuels e Taylor, disposta a descobrir o destino da mãe.</p></div></article>
+        <article class="timeline-item reveal"><span>02</span><div><p class="label">A ESTAÇÃO</p><h3>Um lugar em colapso</h3><p>Sem comunicação e tomada pelo caos, a estação é governada por sobreviventes hostis, sintéticos defeituosos e sistemas prestes a falhar.</p></div></article>
+        <article class="timeline-item reveal"><span>03</span><div><p class="label">O HÓSPEDE</p><h3>Uma presença perfeita</h3><p>O Xenomorfo transforma corredores cotidianos em território de caça. Não existe confronto direto: apenas silêncio, improviso e fuga.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section crew" id="tripulacao" data-screen="historia">
+      <div class="section-index">03 / TRIPULAÇÃO</div>
+      <div class="section-heading split reveal">
+        <div><p class="label">ARQUIVOS DE PESSOAL</p><h2>Rostos no escuro.</h2></div>
+        <p>Pessoas diferentes, ligadas por uma estação em ruínas e decisões tomadas sob pressão extrema.</p>
+      </div>
+      <div class="crew-grid">
+        <article class="crew-card card reveal" data-code="A. RIPLEY" data-tilt><div class="portrait p1"><img src="assets/game-04.jpg" alt="Amanda usando o sensor de movimento" loading="lazy"><span>AR</span><i></i></div><div class="crew-info"><span class="badge text-bg-dark">ENGENHEIRA / CIVIL</span><h3>Amanda Ripley</h3><p>Determinação técnica e pessoal. Sua busca pela mãe conduz toda a missão.</p><button class="btn btn-sm btn-outline-light" type="button" data-person="amanda">ABRIR ARQUIVO +</button></div></article>
+        <article class="crew-card card reveal" data-code="C. SAMUELS" data-tilt><div class="portrait p2"><img src="assets/game-01.jpg" alt="Tripulante em um laboratório de Sevastopol" loading="lazy"><span>CS</span><i></i></div><div class="crew-info"><span class="badge text-bg-dark">SINTÉTICO / WEYLAND-YUTANI</span><h3>Christopher Samuels</h3><p>Um aliado metódico cuja lealdade desafia as expectativas sobre sintéticos.</p><button class="btn btn-sm btn-outline-light" type="button" data-person="samuels">ABRIR ARQUIVO +</button></div></article>
+        <article class="crew-card card reveal" data-code="N. TAYLOR" data-tilt><div class="portrait p3"><img src="assets/game-02.jpg" alt="Terminal corporativo de Sevastopol" loading="lazy"><span>NT</span><i></i></div><div class="crew-info"><span class="badge text-bg-dark">ADVOGADA / CORPORATIVO</span><h3>Nina Taylor</h3><p>Representa os interesses da Companhia — nem sempre compatíveis com a sobrevivência.</p><button class="btn btn-sm btn-outline-light" type="button" data-person="taylor">ABRIR ARQUIVO +</button></div></article>
+        <article class="crew-card card reveal" data-code="A. FIELDING" data-tilt><div class="portrait p4"><img src="assets/game-03.jpg" alt="Corredor de evacuação em Sevastopol" loading="lazy"><span>AF</span><i></i></div><div class="crew-info"><span class="badge text-bg-dark">SOBREVIVENTE / LOCAL</span><h3>Axel Fielding</h3><p>O primeiro guia de Amanda por uma estação onde confiança é um recurso raro.</p><button class="btn btn-sm btn-outline-light" type="button" data-person="axel">ABRIR ARQUIVO +</button></div></article>
+        <article class="crew-card card reveal" data-code="J. RICARDO" data-tilt><div class="portrait p5"><img src="assets/game-06.jpg" alt="Corredor interno da estação Sevastopol" loading="lazy"><span>JR</span><i></i></div><div class="crew-info"><span class="badge text-bg-dark">SEGURANÇA / SEVASTOPOL</span><h3>Ricardo</h3><p>Contato persistente e voz de apoio através dos sistemas da estação.</p><button class="btn btn-sm btn-outline-light" type="button" data-person="ricardo">ABRIR ARQUIVO +</button></div></article>
+        <article class="crew-card card threat reveal" data-code="UNKNOWN" data-tilt><div class="portrait p6"><img src="assets/game-08.jpg" alt="Xenomorfo" loading="lazy"><span>??</span><i></i></div><div class="crew-info"><span class="badge text-bg-danger">ORGANISMO / DESCONHECIDO</span><h3>O Xenomorfo</h3><p>Predador adaptativo, imprevisível e virtualmente impossível de deter.</p><button class="btn btn-sm btn-outline-danger" type="button" data-person="alien">ABRIR ARQUIVO +</button></div></article>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ameaca" data-screen="ia">
+      <div class="ai-visual" aria-hidden="true">
+        <div class="motion-radar">
+          <i></i><i></i><i></i><span class="sweep"></span><b class="blip b1"></b><b class="blip b2"></b>
+          <em>0.21</em>
+        </div>
+      </div>
+      <div class="ai-content reveal">
+        <p class="label danger-text">AMEAÇA PRIORITÁRIA</p>
+        <h2>Ele não segue<br>um roteiro.</h2>
+        <p class="lead">A inteligência artificial do Alien combina percepção local, busca autônoma e um sistema diretor que controla o ritmo sem entregar sua posição exata.</p>
+        <div class="ai-points">
+          <div><span>01</span><p><b>Percepção sensorial</b> Visão, audição e pistas contextuais alimentam decisões diferentes.</p></div>
+          <div><span>02</span><p><b>Busca autônoma</b> O Alien investiga zonas prováveis e escolhe como vasculhar cada espaço.</p></div>
+          <div><span>03</span><p><b>Pressão dinâmica</b> Um diretor regula proximidade e pausas para manter tensão sem tornar a caça totalmente previsível.</p></div>
+        </div>
+        <blockquote>“Você nunca sabe se o som no duto é um aviso… ou se já é tarde demais.”</blockquote>
+      </div>
+    </section>
+
+    <section class="section ai-deep dark-panel" id="arquitetura-ia" data-screen="ia">
+      <div class="section-index">04.2 / ARQUITETURA DA I.A.</div>
+      <div class="section-heading split reveal">
+        <div><p class="label danger-text">ANÁLISE COMPORTAMENTAL</p><h2>Como a caça funciona.</h2></div>
+        <p>Não existe uma sequência fixa de patrulha. A ameaça emerge da comunicação indireta entre sistemas com responsabilidades diferentes.</p>
+      </div>
+      <div class="ai-architecture reveal">
+        <article class="ai-layer director"><span>CAMADA 01</span><h3>Director AI</h3><p>Conhece o estado global da partida e administra o ritmo. Em vez de apontar diretamente o jogador, fornece ao Alien uma região ampla para investigar. Também ajuda a criar ciclos de pressão, contato e alívio.</p><ul><li>Monitora tensão e distância</li><li>Define zonas de interesse</li><li>Evita encontros excessivamente constantes</li></ul></article>
+        <div class="ai-link"><i></i><b>PISTA IMPRECISA</b><i></i></div>
+        <article class="ai-layer alien-brain"><span>CAMADA 02</span><h3>Alien AI</h3><p>Recebe objetivos gerais, mas decide a rota e as ações localmente. Seus comportamentos são organizados em uma árvore que desbloqueia novas possibilidades durante a campanha.</p><ul><li>Busca, espreita e investiga</li><li>Usa dutos e caminhos alternativos</li><li>Escolhe ações a partir do contexto</li></ul></article>
+      </div>
+      <div class="ai-detail-grid">
+        <article class="reveal"><b>01</b><h3>Visão</h3><p>O campo de visão considera distância, ângulo, iluminação, obstáculos e tempo de exposição. Romper contato visual cedo é mais seguro que tentar correr depois da detecção completa.</p></article>
+        <article class="reveal"><b>02</b><h3>Som</h3><p>Corridas, tiros, portas e dispositivos geram eventos sonoros. A intensidade e a distância determinam se o Alien apenas suspeita, investiga ou parte para a origem.</p></article>
+        <article class="reveal"><b>03</b><h3>Memória local</h3><p>Durante uma busca, o Alien mantém pontos de interesse e verifica lugares plausíveis. Isso produz a sensação de que ele “lembra” onde viu ou ouviu algo recentemente.</p></article>
+        <article class="reveal"><b>04</b><h3>Árvore de comportamento</h3><p>A campanha libera novos ramos e respostas. O predador parece aprender porque passa a dispor de mais maneiras de lidar com estratégias já apresentadas pelo jogador.</p></article>
+        <article class="reveal"><b>05</b><h3>Menace Gauge</h3><p>Uma medida de ameaça ajuda o diretor a decidir quando aumentar a pressão ou permitir algum fôlego. O resultado é tensão sustentada, não perseguição contínua.</p></article>
+        <article class="reveal"><b>06</b><h3>Imprevisibilidade controlada</h3><p>Probabilidades, tempos variáveis e rotas alternativas evitam repetições óbvias, mas permanecem limitados pelas regras físicas do cenário e pelos sentidos da criatura.</p></article>
+      </div>
+      <div class="ai-flow reveal" aria-label="Fluxo simplificado da inteligência artificial">
+        <div><span>JOGADOR</span><b>gera som e movimento</b></div><i>→</i><div><span>DIRECTOR</span><b>avalia tensão e zona</b></div><i>→</i><div><span>ALIEN AI</span><b>escolhe uma investigação</b></div><i>→</i><div><span>MUNDO</span><b>rota, visão e obstáculos</b></div>
+      </div>
+      <p class="source-note">Modelo simplificado com base em apresentações técnicas públicas da equipe e análises de desenvolvimento. O comportamento final também depende de scripts de missão e regras específicas de cada área.</p>
+    </section>
+
+    <section class="section gameplay" id="jogabilidade" data-screen="estacao">
+      <div class="section-index">05 / SISTEMAS</div>
+      <div class="section-heading reveal"><p class="label">MANUAL OPERACIONAL</p><h2>Sobreviver exige método.</h2></div>
+      <div class="systems-grid">
+        <article class="system-card reveal"><span class="system-icon">⌁</span><b>01</b><h3>Exploração</h3><p>Leia o ambiente, reative sistemas e encontre rotas alternativas pelos setores.</p></article>
+        <article class="system-card reveal"><span class="system-icon">◉</span><b>02</b><h3>Sensor de movimento</h3><p>Localize ameaças próximas — mas não confunda informação com segurança.</p></article>
+        <article class="system-card reveal"><span class="system-icon">◇</span><b>03</b><h3>Furtividade</h3><p>Mova-se devagar, use coberturas e mantenha cada ruído sob controle.</p></article>
+        <article class="system-card reveal"><span class="system-icon">⌘</span><b>04</b><h3>Criação de itens</h3><p>Transforme sucata escassa em ferramentas, distrações e defesas temporárias.</p></article>
+        <article class="system-card reveal"><span class="system-icon">▦</span><b>05</b><h3>Terminais</h3><p>Invada sistemas, abra portas e recupere mensagens deixadas pela tripulação.</p></article>
+        <article class="system-card red reveal"><span class="system-icon">⚠</span><b>06</b><h3>Combate limitado</h3><p>Armas atraem atenção. Contra o Alien, sua melhor escolha quase sempre é recuar.</p></article>
+      </div>
+    </section>
+
+    <section class="section sectors dark-panel" id="setores" data-screen="estacao">
+      <div class="section-index">06 / CARTOGRAFIA</div>
+      <div class="section-heading split reveal">
+        <div><p class="label">MAPA DA ESTAÇÃO</p><h2>Escolha um setor.</h2></div>
+        <p>Selecione um módulo para consultar a função, o risco e as ameaças registradas.</p>
+      </div>
+      <div class="map-layout">
+        <div class="station-map reveal" role="group" aria-label="Mapa interativo da estação Sevastopol">
+          <div class="map-grid" aria-hidden="true"></div>
+          <div class="sector-preview" id="sector-preview" role="img" aria-label="Laboratórios do setor médico"><span id="sector-caption">LABORATÓRIOS / SCIMED</span></div>
+          <button class="sector-node btn btn-outline-success active n1" data-sector="medical" type="button"><span>01</span>SCIMED</button>
+          <button class="sector-node btn btn-outline-success n2" data-sector="engineering" type="button"><span>02</span>ENGENHARIA</button>
+          <button class="sector-node btn btn-outline-success n3" data-sector="habitation" type="button"><span>03</span>HABITAÇÕES</button>
+          <button class="sector-node btn btn-outline-success n4" data-sector="transit" type="button"><span>04</span>TRÂNSITO</button>
+          <button class="sector-node btn btn-outline-success n5" data-sector="industrial" type="button"><span>05</span>INDUSTRIAL</button>
+          <svg viewBox="0 0 700 440" aria-hidden="true"><path d="M90 100 L255 100 L330 210 L525 210 L610 325"/><path d="M255 100 L255 330 L440 330"/><path d="M330 210 L440 330"/></svg>
+        </div>
+        <aside class="sector-info reveal" aria-live="polite">
+          <div class="sector-number">SETOR <b id="sector-number">01</b></div>
+          <p class="label" id="sector-code">SCIMED TOWER</p>
+          <h3 id="sector-title">Centro Médico San Cristobal</h3>
+          <p id="sector-description">Corredores clínicos, salas de cirurgia e laboratórios abandonados. Pouca visibilidade e muitos becos sem saída.</p>
+          <dl><div><dt>RISCO</dt><dd id="sector-risk" class="danger-text">CRÍTICO</dd></div><div><dt>AMEAÇAS</dt><dd id="sector-threats">Xenomorfo / Sintéticos</dd></div><div><dt>ACESSO</dt><dd id="sector-access">Elevador SCIMED</dd></div></dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section collectibles" id="conquistas" data-screen="arquivos">
+      <div class="section-index">07 / REGISTROS</div>
+      <div class="section-heading reveal"><p class="label">BANCO DE DADOS</p><h2>Conquistas & colecionáveis.</h2></div>
+      <div class="filters" role="group" aria-label="Filtrar registros">
+        <button class="active" type="button" data-filter="all">TODOS <span>06</span></button>
+        <button type="button" data-filter="achievement">CONQUISTAS <span>02</span></button>
+        <button type="button" data-filter="log">REGISTROS <span>02</span></button>
+        <button type="button" data-filter="id">IDs <span>01</span></button>
+        <button type="button" data-filter="access">ACESSO <span>01</span></button>
+      </div>
+      <div class="records-table" role="table" aria-label="Registros e conquistas">
+        <div class="record-row table-head" role="row"><span>NOME</span><span>TIPO</span><span>LOCAL</span><span>DIFICULDADE</span></div>
+        <article class="record-row" role="row" data-type="achievement"><div><b>Sobrevivente</b><small>Complete o jogo na dificuldade mais alta.</small></div><span>CONQUISTA</span><span>GERAL</span><em class="hard">DIFÍCIL</em></article>
+        <article class="record-row" role="row" data-type="log"><div><b>Arquivo Nostromo</b><small>Recupere um registro especial da antiga tripulação.</small></div><span>ÁUDIO</span><span>SEEGSON COMMS</span><em class="medium">MÉDIA</em></article>
+        <article class="record-row" role="row" data-type="id"><div><b>ID: A. Hutchison</b><small>Encontre o cartão de identificação perdido.</small></div><span>ID TAG</span><span>HABITAÇÕES</span><em class="easy">FÁCIL</em></article>
+        <article class="record-row" role="row" data-type="access"><div><b>Nível de acesso III</b><small>Obtenha o sintonizador de acesso aprimorado.</small></div><span>ACESSO</span><span>SCIMED</span><em class="medium">MÉDIA</em></article>
+        <article class="record-row" role="row" data-type="log"><div><b>Mensagem: Um novo começo</b><small>Leia o terminal dos executivos da Seegson.</small></div><span>ARQUIVO</span><span>SYSTECH</span><em class="easy">FÁCIL</em></article>
+        <article class="record-row" role="row" data-type="achievement"><div><b>Sem tocar em ninguém</b><small>Conclua uma missão sem eliminar humanos.</small></div><span>CONQUISTA</span><span>MISSÃO 04</span><em class="hard">DIFÍCIL</em></article>
+      </div>
+    </section>
+
+    <section class="section survival" id="sobrevivencia" data-screen="estacao">
+      <div class="survival-copy reveal">
+        <p class="label">PROTOCOLO DE EMERGÊNCIA / 08</p>
+        <h2>Guia de<br>sobrevivência.</h2>
+        <p>O medo acelera decisões ruins. O protocolo existe para manter você vivo.</p>
+        <div class="warning-strip"><span>⚠</span> MOVIMENTO DETECTADO NO SETOR</div>
+      </div>
+      <ol class="survival-list">
+        <li class="reveal"><span>01</span><div><h3>Ande. Não corra.</h3><p>Passos rápidos atravessam paredes. Corra apenas quando a ameaça já conhece sua posição.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Confie nos ouvidos.</h3><p>O sensor informa distância, não altura. Escute dutos, portas e mudanças na trilha sonora.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Não abuse dos esconderijos.</h3><p>Armários podem virar armadilhas. Prefira rotas com mais de uma saída.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Crie uma segunda opção.</h3><p>Guarde distrações, conheça a rota de fuga e nunca gaste todo o combustível.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section development dark-panel" id="desenvolvimento" data-screen="arquivos">
+      <div class="section-index">09 / BASTIDORES</div>
+      <div class="section-heading reveal"><p class="label">TRANSMISSÃO DA EQUIPE</p><h2>O futuro imaginado em 1979.</h2></div>
+      <div class="dev-grid">
+        <div class="dev-art reveal"><div class="crt"><span>PLAYBACK</span><i></i><b>20:14:07</b></div></div>
+        <div class="dev-copy reveal">
+          <p class="lead">A Creative Assembly reconstruiu o universo visual do filme original a partir de um princípio simples: nada poderia parecer criado depois de 1979.</p>
+          <p>Monitores de fósforo verde, botões físicos, fitas magnéticas e estruturas industriais deram origem ao retrofuturismo de Sevastopol. O terror psicológico veio do contraste entre tecnologia robusta e vulnerabilidade humana.</p>
+          <div class="dev-stats"><div><b>4</b><span>ANOS DE<br>PRODUÇÃO</span></div><div><b>70s</b><span>LINGUAGEM<br>VISUAL</span></div><div><b>01</b><span>AMEAÇA<br>IMPLACÁVEL</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="galeria" data-screen="galeria">
+      <div class="section-index">10 / GALERIA</div>
+      <div class="section-heading split reveal"><div><p class="label">ARQUIVO VISUAL</p><h2>Fragmentos da estação.</h2></div><p>Selecione uma imagem para ampliar o registro.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item wide g1 reveal" type="button" data-image="game-01.jpg" data-title="Laboratório / Sevastopol"><span>01 / LABORATÓRIO</span></button>
+        <button class="gallery-item g2 reveal" type="button" data-image="game-02.jpg" data-title="Terminal CRT / Engenharia"><span>02 / TERMINAL CRT</span></button>
+        <button class="gallery-item g3 reveal" type="button" data-image="game-03.jpg" data-title="Corredor de evacuação"><span>03 / EVACUAÇÃO</span></button>
+        <button class="gallery-item g4 reveal" type="button" data-image="game-04.jpg" data-title="Sensor de movimento"><span>04 / SENSOR</span></button>
+        <button class="gallery-item wide g5 reveal" type="button" data-image="game-05.jpg" data-title="Trajes espaciais"><span>05 / TRAJES</span></button>
+        <button class="gallery-item g6 reveal" type="button" data-image="game-06.jpg" data-title="Corredor da estação"><span>06 / CORREDOR</span></button>
+        <button class="gallery-item g7 reveal" type="button" data-image="game-07.jpg" data-title="Confronto e fogo"><span>07 / SOBREVIVÊNCIA</span></button>
+        <button class="gallery-item wide g8 reveal" type="button" data-image="game-08.jpg" data-title="Xenomorfo"><span>08 / XENOMORFO</span></button>
+      </div>
+      <p class="gallery-credit">Screenshots oficiais obtidos da <a href="https://store.steampowered.com/app/214490/Alien_Isolation/" target="_blank" rel="noopener noreferrer">página de Alien: Isolation na Steam</a>. © SEGA / Creative Assembly.</p>
+    </section>
+
+    <section class="section trivia" id="curiosidades" data-screen="galeria">
+      <div class="section-index">11 / NOTAS</div>
+      <div class="section-heading reveal"><p class="label">DADOS RECUPERADOS</p><h2>Curiosidades do arquivo.</h2></div>
+      <div class="trivia-list">
+        <details class="reveal" open><summary><span>01</span> Tecnologia de baixa fidelidade <b>+</b></summary><p>A interface visual segue a lógica de “tecnologia usada”: telas curvas, ruído analógico e máquinas que parecem ter uma função física real.</p></details>
+        <details class="reveal"><summary><span>02</span> Duas inteligências artificiais <b>+</b></summary><p>Um sistema diretor sugere áreas de busca, enquanto a IA do Alien decide como investigar. A separação preserva a sensação de autonomia.</p></details>
+        <details class="reveal"><summary><span>03</span> Som como informação <b>+</b></summary><p>Passos, metal nos dutos e portas automáticas não são apenas atmosfera: são parte do vocabulário de sobrevivência do jogador.</p></details>
+        <details class="reveal"><summary><span>04</span> Salvamento com risco real <b>+</b></summary><p>Os terminais de emergência exigem alguns segundos para concluir o registro, criando tensão até mesmo em uma ação normalmente segura.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <aside class="screen-nav" aria-label="Navegação entre telas">
+    <span class="screen-progress">01 / 06</span>
+    <a href="#/inicio" data-route="inicio"><i></i><b>INÍCIO</b></a>
+    <a href="#/historia" data-route="historia"><i></i><b>HISTÓRIA</b></a>
+    <a href="#/ia" data-route="ia"><i></i><b>I.A.</b></a>
+    <a href="#/estacao" data-route="estacao"><i></i><b>ESTAÇÃO</b></a>
+    <a href="#/arquivos" data-route="arquivos"><i></i><b>ARQUIVOS</b></a>
+    <a href="#/galeria" data-route="galeria"><i></i><b>GALERIA</b></a>
+  </aside>
+  <div class="screen-transition" aria-hidden="true"><span>CARREGANDO MÓDULO</span></div>
+
+  <footer class="site-footer">
+    <div class="footer-main"><a class="brand" href="#/inicio"><img src="assets/sevastopol-archives-logo.svg" alt="Sevastopol Archives"></a><p>Sobreviver é a única missão.</p><a class="back-top" href="#/inicio">VOLTAR AO INÍCIO ↑</a></div>
+    <div class="footer-bottom"><span>PROJETO DE FÃ NÃO OFICIAL</span><span>IMAGENS: STEAM / SEGA / CREATIVE ASSEMBLY</span><span>TERMINAL 06.24</span></div>
+  </footer>
+
+  <dialog class="person-modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Fechar">×</button>
+    <p class="label">ARQUIVO DE PESSOAL</p><h2 id="modal-title">Amanda Ripley</h2><p id="modal-role"></p><p id="modal-copy"></p>
+  </dialog>
+  <dialog class="lightbox" aria-label="Visualização da galeria">
+    <button class="modal-close" type="button" aria-label="Fechar">×</button><div class="lightbox-image"></div><p></p>
+  </dialog>
+</body>
+</html>

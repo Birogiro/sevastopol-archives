@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+  <title id="title">Sevastopol Archives</title>
+  <desc id="desc">Símbolo de terminal orbital com a letra S e o nome Sevastopol Archives.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8e6d0"/>
+      <stop offset="1" stop-color="#83b66d"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="2">
+    <path d="M8 15 24 4h46l16 11v66L70 92H24L8 81Z"/>
+    <path opacity=".38" d="M18 48c12-23 46-29 62-7M18 48c12 23 46 29 62 7"/>
+    <path d="M25 28h40L71 34v8H41l-5 5 5 6h24l7 7v9l-8 7H24"/>
+    <circle cx="18" cy="48" r="3" fill="#e35b4f" stroke="none" filter="url(#glow)"/>
+    <circle cx="78" cy="48" r="3" fill="#a5cf77" stroke="none" filter="url(#glow)"/>
+  </g>
+  <g fill="#d7ded4">
+    <text x="108" y="47" font-family="Arial Narrow, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="7">SEVASTOPOL</text>
+    <text x="110" y="69" font-family="Courier New, monospace" font-size="10" letter-spacing="5" fill="#83a18d">ARCHIVES / TERMINAL 2137</text>
+  </g>
+  <path d="M110 81h298" stroke="#496055" stroke-width="1" stroke-dasharray="18 5 3 5"/>
+</svg>
